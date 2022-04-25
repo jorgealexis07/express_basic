@@ -23,7 +23,13 @@ app.get('/explorersInNode',(req,res)=>{
     res.send(explorer)
 })
 
-// Query Params:
+// Query Params: Recibir parametros por la url
+// http://localhost:3000/explorers/alexis
+// req.params = {"explorerName":"alexis"}
+app.get('/explorers/:explorerName', (req, res) => {
+    res.send(req.params)
+} )
+
 
 
 //Con esto inicializamos esta app
